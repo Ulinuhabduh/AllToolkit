@@ -4,11 +4,12 @@ import {
   Music2, Film, FileText,
   Braces, Binary, Hash, Regex, QrCode, GitCompare, Type, ListOrdered, Pilcrow,
   KeyRound, Palette, Ruler, Globe2,
-  Image as ImageIcon, FileType2, Wrench, Code2, BookText,
+  Contact, Receipt, ReceiptText, Mail, Banknote, IdCard, Award, FileSignature,
+  Image as ImageIcon, FileType2, Wrench, Code2, BookText, Sparkles,
   LucideIcon,
 } from 'lucide-react';
 
-export type ToolCategory = 'image' | 'pdf' | 'convert' | 'dev' | 'text' | 'utility';
+export type ToolCategory = 'image' | 'pdf' | 'convert' | 'dev' | 'text' | 'design' | 'utility';
 
 export interface Tool {
   slug: string;
@@ -28,6 +29,7 @@ export const categories: Record<ToolCategory, { name: string; icon: LucideIcon; 
   convert: { name: 'File Converter', icon: Wrench, color: 'from-amber-500 to-yellow-500', description: 'Convert audio, video & documents' },
   dev: { name: 'Developer Tools', icon: Code2, color: 'from-emerald-500 to-teal-500', description: 'JSON, Base64, Regex & more' },
   text: { name: 'Text Tools', icon: BookText, color: 'from-sky-500 to-blue-500', description: 'Format, count & transform text' },
+  design: { name: 'Design & Business', icon: Sparkles, color: 'from-fuchsia-500 to-pink-500', description: 'Business cards, signatures & branding' },
   utility: { name: 'Utilities', icon: Wrench, color: 'from-violet-500 to-purple-500', description: 'Passwords, colors & converters' },
 };
 
@@ -41,6 +43,7 @@ export const tools: Tool[] = [
   { slug: 'image/crop', name: 'Image Cropper', category: 'image', description: 'Crop images to any size', icon: Crop, status: 'ready' },
   { slug: 'image/watermark', name: 'Watermark', category: 'image', description: 'Add text watermark to images', icon: Droplets, status: 'ready' },
   { slug: 'image/color-picker', name: 'Color Picker', category: 'image', description: 'Pick colors from an image', icon: Pipette, status: 'ready' },
+  { slug: 'image/id-photo', name: 'ID Photo Maker', category: 'image', description: 'Crop & resize for passport, KTP, SIM, visa', icon: IdCard, keywords: ['passport', 'ktp', 'sim', 'pas foto', 'visa'], status: 'ready' },
 
   // ─── PDF ───
   { slug: 'pdf/merge', name: 'Merge PDF', category: 'pdf', description: 'Combine multiple PDFs into one', icon: Combine, status: 'ready' },
@@ -70,11 +73,20 @@ export const tools: Tool[] = [
   { slug: 'text/word-count', name: 'Word Counter', category: 'text', description: 'Count words, characters & lines', icon: ListOrdered, status: 'ready' },
   { slug: 'text/lorem', name: 'Lorem Ipsum', category: 'text', description: 'Generate placeholder text', icon: Pilcrow, status: 'ready' },
 
+  // ─── Design & Business ───
+  { slug: 'design/business-card', name: 'Business Card Builder', category: 'design', description: 'Design & export business cards (PNG, PDF, vCard)', icon: Contact, keywords: ['name card', 'vcard', 'kartu nama'], status: 'ready' },
+  { slug: 'design/invoice', name: 'Invoice Generator', category: 'design', description: 'Create professional invoices with line items & tax', icon: ReceiptText, keywords: ['bill', 'tagihan', 'faktur'], status: 'ready' },
+  { slug: 'design/receipt', name: 'Receipt Generator', category: 'design', description: 'Generate transaction receipts (formal & thermal style)', icon: Receipt, keywords: ['kwitansi', 'struk'], status: 'ready' },
+  { slug: 'design/certificate', name: 'Certificate Maker', category: 'design', description: 'Design certificates of achievement, completion, awards', icon: Award, keywords: ['sertifikat', 'piagam', 'penghargaan'], status: 'ready' },
+  { slug: 'design/email-signature', name: 'Email Signature', category: 'design', description: 'Build HTML email signatures for Gmail, Outlook & more', icon: Mail, keywords: ['signature', 'tanda tangan email'], status: 'ready' },
+  { slug: 'design/letterhead', name: 'Letterhead Designer', category: 'design', description: 'Create branded letterheads & full letter documents', icon: FileSignature, keywords: ['kop surat', 'surat resmi'], status: 'ready' },
+
   // ─── Utility ───
   { slug: 'utility/password', name: 'Password Generator', category: 'utility', description: 'Generate secure random passwords', icon: KeyRound, status: 'ready' },
   { slug: 'utility/color', name: 'Color Tools', category: 'utility', description: 'HEX, RGB, HSL converter & palette', icon: Palette, status: 'ready' },
   { slug: 'utility/unit', name: 'Unit Converter', category: 'utility', description: 'Length, weight, temperature, and more', icon: Ruler, status: 'ready' },
   { slug: 'utility/timezone', name: 'Timezone Converter', category: 'utility', description: 'Convert time across timezones', icon: Globe2, status: 'ready' },
+  { slug: 'utility/currency', name: 'Currency Converter', category: 'utility', description: 'Live exchange rates for 30+ currencies', icon: Banknote, keywords: ['forex', 'usd', 'idr', 'kurs'], status: 'ready' },
 ];
 
 export const toolsByCategory = (cat: ToolCategory) => tools.filter((t) => t.category === cat);
