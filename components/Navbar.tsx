@@ -40,7 +40,7 @@ export function Navbar() {
             {mounted && theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
           <Button variant="ghost" size="icon" asChild aria-label="GitHub">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"><Github className="h-4 w-4" /></a>
+            <a href="https://github.com/Ulinuhabduh/AllToolkit" target="_blank" rel="noopener noreferrer"><Github className="h-4 w-4" /></a>
           </Button>
         </div>
       </div>
