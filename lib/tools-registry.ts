@@ -1,7 +1,7 @@
 import {
   Eraser, Wand2, FileImage, Crop, Maximize2, Droplets, Pipette,
-  Combine, Scissors, FileDown, FileUp, Unlock, ScanText,
-  Music2, Film, FileText,
+  Combine, Scissors, FileDown, FileUp, Unlock, ScanText, FileMinus, FilePenLine,
+  Music2, Film, FileText, Youtube,
   Braces, Binary, Hash, Regex, QrCode, GitCompare, Type, ListOrdered, Pilcrow,
   KeyRound, Palette, Ruler, Globe2,
   Contact, Receipt, ReceiptText, Mail, Banknote, IdCard, Award, FileSignature,
@@ -46,8 +46,10 @@ export const tools: Tool[] = [
   { slug: 'image/id-photo', name: 'ID Photo Maker', category: 'image', description: 'Crop & resize for passport, KTP, SIM, visa', icon: IdCard, keywords: ['passport', 'ktp', 'sim', 'pas foto', 'visa'], status: 'ready' },
 
   // ─── PDF ───
-  { slug: 'pdf/merge', name: 'Merge PDF', category: 'pdf', description: 'Combine multiple PDFs into one', icon: Combine, status: 'ready' },
-  { slug: 'pdf/split', name: 'Split PDF', category: 'pdf', description: 'Split PDF into separate pages', icon: Scissors, status: 'ready' },
+  { slug: 'pdf/merge', name: 'Merge PDF', category: 'pdf', description: 'Combine multiple PDFs into one document with custom order', icon: Combine, keywords: ['combine', 'join', 'gabung pdf'], status: 'ready' },
+  { slug: 'pdf/edit', name: 'Edit PDF', category: 'pdf', description: 'Add text, signatures, shapes, highlight, images & whiteout to PDF', icon: FilePenLine, keywords: ['annotate', 'sign', 'draw', 'stamp', 'redact', 'edit pdf'], status: 'ready' },
+  { slug: 'pdf/cut', name: 'Cut / Remove PDF Pages', category: 'pdf', description: 'Cut, delete, or extract specific pages from a PDF document', icon: FileMinus, keywords: ['delete page', 'remove page', 'potong pdf', 'hapus halaman'], status: 'ready' },
+  { slug: 'pdf/split', name: 'Split PDF', category: 'pdf', description: 'Split PDF into separate files by ranges, page count, or extraction', icon: Scissors, keywords: ['extract pages', 'separate', 'pecah pdf'], status: 'ready' },
   { slug: 'pdf/compress', name: 'Compress PDF', category: 'pdf', description: 'Reduce PDF file size', icon: FileDown, status: 'ready' },
   { slug: 'pdf/to-image', name: 'PDF to Image', category: 'pdf', description: 'Convert PDF pages to PNG/JPG', icon: FileImage, status: 'beta' },
   { slug: 'pdf/from-image', name: 'Image to PDF', category: 'pdf', description: 'Convert images to PDF', icon: FileUp, status: 'ready' },
@@ -55,6 +57,7 @@ export const tools: Tool[] = [
   { slug: 'pdf/ocr', name: 'PDF OCR', category: 'pdf', description: 'Extract text from PDF or image', icon: ScanText, status: 'beta' },
 
   // ─── Convert ───
+  { slug: 'convert/youtube', name: 'YouTube Downloader', category: 'convert', description: 'Download YouTube videos in MP4 (1080p, 720p, 480p) or extract MP3 / M4A music', icon: Youtube, keywords: ['youtube', 'yt', 'mp3', 'mp4', 'music', 'video', 'download video', 'lagu', 'download youtube', 'shorts'], status: 'ready' },
   { slug: 'convert/audio', name: 'Audio Converter', category: 'convert', description: 'MP3, WAV, FLAC, M4A, OGG', icon: Music2, status: 'beta' },
   { slug: 'convert/video', name: 'Video Converter', category: 'convert', description: 'MP4, WebM, GIF, extract audio', icon: Film, status: 'beta' },
   { slug: 'convert/document', name: 'Document Converter', category: 'convert', description: 'DOCX, TXT, MD, HTML', icon: FileText, status: 'ready' },

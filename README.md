@@ -1,203 +1,242 @@
-# AllTools — All-in-One Online Toolkit
+# AllTools — All-in-One Online Toolkit & Privacy-First Media Suite
 
-A privacy-first platform that bundles 30+ free utilities (image, PDF, file converters, developer tools, text utilities) into a single Next.js app. Everything runs **client-side in the browser** — no files are uploaded to any server.
+<p align="center">
+  <img src="public/logo.png" width="90" height="90" alt="AllTools Logo" />
+</p>
 
-## ✨ Features
+<p align="center">
+  <b>A modern, privacy-first platform bundling 35+ free, high-performance web utilities into a single Next.js application.</b><br />
+  Featuring frosted Glassmorphism UI, client-side WebAssembly computation, and native real-time media streaming.
+</p>
 
-| Category | Tools |
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-14.2-black?style=flat-square&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.6-blue?style=flat-square&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.4-38bdf8?style=flat-square&logo=tailwindcss" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" />
+</p>
+
+---
+
+## 🌟 Overview
+
+**AllTools** is designed with a **privacy-first and speed-first philosophy**. Most file operations (PDF editing, image background removal, compression, OCR, and document conversions) run **100% client-side in the browser** using WebAssembly (FFmpeg, Tesseract, ONNX). Your confidential files and documents never leave your device.
+
+For streaming tasks such as the **YouTube Downloader**, AllTools utilizes a high-performance **native `yt-dlp` stream engine** with real-time job progress polling (speed, percentage, ETA) and instant file delivery without third-party redirects or ads.
+
+---
+
+## ✨ Features & Tool Catalog
+
+### 📄 PDF Toolkit
+Comprehensive suite for viewing, manipulating, and editing PDF documents directly in the browser:
+- **Edit PDF**: Full-featured in-browser PDF editor. Add custom text, draw with pen/brush, highlight, draw shapes, insert images/stamps, signature pad (draw/type), whiteout/redact, add watermarks, and reorder/rotate/delete pages.
+- **Merge PDF**: Combine multiple PDFs into a single document with drag-and-drop ordering, page count calculation, and custom per-file page ranges (e.g. `1, 3-5`).
+- **Cut / Remove Pages**: Visual PDF page gallery with dual modes (*Delete Selected* or *Extract / Keep Selected*), rotation per page, and batch selectors (*All / None / Odd / Even / Invert*).
+- **Split PDF**: Split documents using 4 flexible modes: Custom Page Ranges, Every N Pages, Extract All Single Pages, or Visual Selection into standalone PDFs or a `.zip` archive.
+- **Compress PDF**: Optimize and shrink PDF file size.
+- **PDF to Image**: Render high-resolution PDF pages into PNG / JPG images.
+- **Image to PDF**: Convert photos and scanned documents into standardized PDF files.
+- **Unlock PDF**: Strip passwords and security restrictions from unlocked PDFs.
+- **PDF OCR**: Extract editable text from scanned PDFs and document images using client-side Tesseract OCR.
+
+---
+
+### 🎥 Media & File Converters
+- **YouTube Downloader**: High-speed downloader supporting YouTube Videos, Shorts, and Music links:
+  - **Video (MP4)**: `1080p Full HD`, `720p HD`, `480p SD`, and `360p`.
+  - **Audio & Music (MP3 / M4A / WAV)**: `MP3 320 kbps` (Extreme Quality), `MP3 192 kbps`, `MP3 128 kbps`, `M4A (AAC)`, and lossless `WAV`.
+  - **Cover Art / Thumbnail**: Direct download of `1080p MaxRes` and `720p HQ` `.jpg` images.
+  - **Real-Time Progress**: Live tracking displaying byte progress, transfer speed (`⚡ MB/s`), and ETA (`⏱️`).
+  - **Privacy & Clean Experience**: 100% direct in-browser file delivery with zero third-party ads or external redirects.
+- **Audio Converter**: Convert audio between MP3, WAV, FLAC, M4A, and OGG formats using FFmpeg WASM.
+- **Video Converter**: Transcode videos between MP4, WebM, and GIF, or extract audio tracks.
+- **Document Converter**: Convert documents between DOCX, Markdown, HTML, and TXT formats.
+
+---
+
+### 🖼️ Image Utilities
+- **Remove Background**: AI-driven background removal running client-side with ONNX models.
+- **Image Enhancer**: Sharpen, upscale, and enhance image clarity.
+- **Image Compressor**: Reduce PNG, JPG, and WebP file sizes with customizable quality thresholds.
+- **Image Format Converter**: Batch convert images between PNG, JPG, WebP, AVIF, BMP, and GIF.
+- **Image Resizer**: Adjust pixel dimensions and aspect ratios with instant preview.
+- **Image Cropper**: Interactive aspect ratio cropping with preset crop sizes (1:1, 16:9, 4:3, etc.).
+- **Watermark Tool**: Stamp custom text or image watermarks with opacity and position controls.
+- **Color Picker**: Extract dominant palette colors and hex values from uploaded images.
+- **ID Photo Maker**: Crop and resize photos for official document standards (Passport, Visa, KTP, SIM).
+
+---
+
+### 🎨 Design & Business Generators
+- **Business Card Generator**: Design and export print-ready corporate and personal business cards.
+- **Certificate Maker**: Create completion and achievement certificates with custom signatures.
+- **Email Signature Generator**: Generate HTML email signatures compatible with Gmail, Outlook, and Apple Mail.
+- **Invoice Generator**: Create detailed invoices with tax calculations, itemization, and PDF export.
+- **Letterhead Generator**: Professional company letterhead templates with custom branding.
+- **Receipt Maker**: Generate official payment receipts with serial numbers and item totals.
+
+---
+
+### 💻 Developer & Text Tools
+- **JSON Formatter & Validator**: Format, minify, validate, and inspect JSON structures.
+- **Base64 Encoder / Decoder**: Encode and decode raw text and binary files.
+- **Hash Generator**: Compute cryptographic hashes (SHA-1, SHA-256, SHA-384, SHA-512, MD5).
+- **Regex Tester**: Interactive regular expression tester with live match highlighting and regex cheatsheet.
+- **QR Code Generator**: Generate customizable QR codes from URLs, Wi-Fi credentials, and text with logo embedding.
+- **Diff Checker**: Side-by-side and inline text difference comparison.
+- **Markdown Previewer**: Live split-pane Markdown editor with rendered HTML output.
+- **Case Converter**: Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case, and PascalCase.
+- **Word Counter**: Live word, character, sentence, paragraph, and reading time counter.
+- **Lorem Ipsum Generator**: Customizable placeholder text generator by paragraphs, sentences, or words.
+
+---
+
+### 🛠️ General Utilities
+- **Password Generator**: Cryptographically secure random password generator with entropy meters.
+- **Color Palette & Converter**: Convert between HEX, RGB, HSL, and HSV with harmonic palette suggestions.
+- **Currency Converter**: Live currency exchange rate calculator with historical trends.
+- **Timezone Converter**: Interactive world clock and timezone meeting planner.
+- **Unit Converter**: Convert length, mass, temperature, area, volume, and digital storage units.
+
+---
+
+## 🎨 Design & User Experience (UX)
+
+AllTools features a modern **Frosted Glassmorphism** design system:
+- **Typography**: Clean, readable sans-serif typography powered by Google Font [`Plus Jakarta Sans`](https://fonts.google.com/specimen/Plus+Jakarta+Sans).
+- **Ambient Glowing Lighting**: Subtle floating background orbs with smooth CSS keyframe animations (`float-slow`, `float-reverse`).
+- **Interactive Category Filtering**: Category filter pills with live tool count badges and instant search filtering.
+- **Favorites & Bookmarking System**: Save frequently used tools to a dedicated **Favorites** tab persisted via `localStorage`.
+- **Responsive Layout**: Fluid experience across mobile, tablet, and ultra-wide desktop monitors.
+- **Dark & Light Mode**: Seamless theme switching with persistent user preference.
+
+---
+
+## 🧱 Tech Stack & Architecture
+
+| Layer | Technology |
 |---|---|
-| **Image** | Remove Background, Image Enhancer, Compressor, Format Converter, Resizer, Cropper, Watermark, Color Picker |
-| **PDF** | Merge, Split, Compress, PDF → Image, Image → PDF, Unlock (with password), OCR |
-| **File Converter** | Audio (MP3/WAV/OGG/M4A/FLAC), Video (MP4/WebM/GIF), Document (DOCX/MD/HTML/TXT) |
-| **Developer** | JSON Formatter, Base64 Encoder/Decoder, Hash Generator (SHA family), Regex Tester, QR Code Generator, Diff Checker |
-| **Text** | Markdown Preview, Case Converter, Word Counter, Lorem Ipsum |
-| **Utility** | Password Generator, Color Tools (HEX/RGB/HSL), Unit Converter, Timezone Converter |
+| **Core Framework** | [Next.js 14](https://nextjs.org/) (App Router) + React 18 + TypeScript 5.6 |
+| **Styling & Design** | [Tailwind CSS 3.4](https://tailwindcss.com/) + Custom Glassmorphism Tokens |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **PDF Processing** | [`pdf-lib`](https://pdf-lib.js.org/) & [`pdfjs-dist`](https://mozilla.github.io/pdf.js/) |
+| **Media Processing** | Standalone [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) + [`ffmpeg`](https://ffmpeg.org/) (Serverless & Client WASM) |
+| **OCR & AI** | [`tesseract.js`](https://tesseract.projectnaptha.com/) + [`@imgly/background-removal`](https://img.ly/) |
+| **Document Processing** | `mammoth`, `turndown`, `marked`, `jspdf`, `jszip` |
 
-> 🔒 **Privacy by design**: all heavy processing (FFmpeg, Tesseract, ONNX background removal) loads at runtime from a CDN and runs inside your browser. Your files never leave your machine.
-
-## 🧱 Tech Stack
-
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router) + React 18 + TypeScript
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with shadcn/ui–style primitives
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Theme**: `next-themes` (light / dark / system)
-- **Processing libraries** (lazy-loaded per tool):
-  - `pdf-lib`, `pdfjs-dist` — PDF read/write/render
-  - `browser-image-compression` — image compression
-  - `tesseract.js` — OCR
-  - `mammoth`, `turndown`, `marked` — document conversion
-  - `@ffmpeg/ffmpeg` (CDN) — audio/video conversion
-  - `@imgly/background-removal` (CDN) — AI background removal
-  - `qrcode`, `jspdf`, `jszip`, `diff` — misc
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- **Node.js** ≥ 20 ([nvm-windows](https://github.com/coreybutler/nvm-windows) recommended)
-- **npm** ≥ 10 (bundled with Node 20)
+- **Node.js**: `v20.x` or later (LTS recommended)
+- **npm**: `v10.x` or later (or `pnpm` / `yarn`)
 - **Git**
-- A modern browser (Chrome / Edge / Firefox)
 
-### Install & run
+### Installation
 
 ```bash
-# 1. Clone
-git clone <your-repo-url> all-tools
-cd all-tools
+# 1. Clone the repository
+git clone https://github.com/your-username/AllToolkit.git
+cd AllToolkit
 
 # 2. Install dependencies
 npm install
 
-# 3. Start dev server (hot reload at http://localhost:3000)
+# 3. Ensure the yt-dlp binary is executable (for Linux / macOS)
+chmod +x bin/yt-dlp
+
+# 4. Start the local development server
 npm run dev
 ```
 
-### Available scripts
-
-| Command | Description |
-|---|---|
-| `npm run dev` | Dev server with HMR on port 3000 |
-| `npm run build` | Production build (typecheck + optimize) |
-| `npm run start` | Run the built production app |
-| `npm run lint` | ESLint check |
-| `npx tsc --noEmit` | Type-check only (faster than build) |
-
-## 📁 Project Structure
-
-```
-all-tools/
-├── app/                          # Next.js App Router
-│   ├── layout.tsx                # Root layout (theme, navbar, footer)
-│   ├── page.tsx                  # Landing page
-│   ├── globals.css               # Tailwind base + CSS variables
-│   └── (tools)/                  # Route group for all tools
-│       ├── image/<tool>/page.tsx
-│       ├── pdf/<tool>/page.tsx
-│       ├── convert/<tool>/page.tsx
-│       ├── dev/<tool>/page.tsx
-│       ├── text/<tool>/page.tsx
-│       └── utility/<tool>/page.tsx
-├── components/
-│   ├── ui/                       # Reusable primitives (Button, Card, Input, …)
-│   ├── Navbar.tsx
-│   ├── Footer.tsx
-│   ├── ToolGrid.tsx              # Landing-page grid with search
-│   ├── ToolLayout.tsx            # Shared wrapper for every tool page
-│   ├── FileDropzone.tsx          # Drag-and-drop file input
-│   ├── ComingSoon.tsx            # Placeholder for WIP tools
-│   └── theme-provider.tsx
-├── lib/
-│   ├── tools-registry.ts         # ★ Single source of truth for every tool
-│   ├── utils.ts                  # cn(), formatBytes(), downloadBlob(), …
-│   └── ffmpeg.ts                 # Shared FFmpeg loader (CDN)
-├── public/
-├── next.config.mjs               # Webpack & headers (COOP/COEP)
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
-```
-
-## 👥 Collaborating with Others
-
-### Recommended Git workflow
-
-We use a **feature-branch + PR review** flow on top of `main`.
-
-```bash
-# 1. Sync with main
-git checkout main
-git pull origin main
-
-# 2. Create a feature branch (use a descriptive name)
-git checkout -b feat/audio-trim-tool
-# or:   fix/pdf-split-empty-range
-# or:   chore/upgrade-tailwind
-
-# 3. Code, commit small focused changes
-git add app/(tools)/convert/audio-trim/page.tsx
-git commit -m "feat(convert): add audio trim tool"
-
-# 4. Push and open a Pull Request
-git push -u origin feat/audio-trim-tool
-# → open a PR on GitHub/GitLab, request review
-```
-
-**Commit message convention** ([Conventional Commits](https://www.conventionalcommits.org/)):
-
-```
-feat(scope): short summary       # new user-facing feature
-fix(scope): what was broken      # bug fix
-chore: tooling / non-user        # deps, config
-docs: README / comments
-refactor: no behavior change
-```
-
-Examples used in this repo:
-- `feat(image): add color picker tool`
-- `fix(pdf): handle empty range in split`
-- `chore(deps): bump pdfjs-dist to 4.8.69`
-
-### Branch protection rules (recommended for the repo owner)
-
-On GitHub → Settings → Branches → add a rule for `main`:
-- ✅ Require pull request before merging
-- ✅ Require status checks to pass (CI build + typecheck)
-- ✅ Require at least 1 approving review
-- ✅ Dismiss stale reviews when new commits are pushed
-- ❌ No direct pushes to `main`
-
-### Splitting work without conflicts
-
-The codebase is organized so that **each tool is fully self-contained** in its own folder. To minimize merge conflicts:
-
-| If two devs work on… | Conflict risk |
-|---|---|
-| Different tool pages (`app/(tools)/image/x` vs `app/(tools)/pdf/y`) | 🟢 None |
-| Same tool page | 🔴 High — coordinate first |
-| `lib/tools-registry.ts` | 🟡 Low — small file, easy to resolve |
-| `components/ui/*` shared primitives | 🟡 Coordinate, may affect everyone |
-| `package.json` (deps) | 🟡 Resolve carefully, re-run `npm install` |
-
-### Code-review checklist for PRs
-
-Before requesting review, the author should confirm:
-
-- [ ] `npm run build` passes locally (no errors, no new warnings)
-- [ ] `npx tsc --noEmit` is clean
-- [ ] New tool is registered in `lib/tools-registry.ts` with correct `status`
-- [ ] Tool page uses `<ToolLayout slug="..." />`
-- [ ] Heavy libs are loaded with **dynamic `import()`** (not top-level) — keeps the shared bundle small
-- [ ] No hardcoded English-only strings if i18n was set up (currently single-language)
-- [ ] No `console.log` left in production code
-- [ ] Privacy guarantee preserved (no fetch to external servers with user data)
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ---
 
-## ➕ How to Add a New Tool
+## 📜 Available Scripts
 
-A new tool is **three changes**:
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts the Next.js development server with Hot Module Replacement (HMR) on port `3000` |
+| `npm run build` | Compiles the production build, runs strict TypeScript checks, and optimizes pages |
+| `npm run start` | Serves the optimized production build |
+| `npm run lint` | Runs ESLint to check for code quality and syntax errors |
+| `npx tsc --noEmit` | Runs a standalone TypeScript type-check without generating output files |
 
-### 1. Register it in [`lib/tools-registry.ts`](lib/tools-registry.ts)
+---
 
-```ts
-import { Scissors } from 'lucide-react'; // pick an icon from lucide.dev
+## 📂 Project Architecture & Directory Map
 
-// add inside the tools[] array
-{
-  slug: 'image/background-blur',
-  name: 'Background Blur',
-  category: 'image',
-  description: 'Blur the background of a portrait',
-  icon: Scissors,
-  status: 'beta',                 // 'ready' | 'beta' | 'soon'
-  keywords: ['portrait', 'blur'], // optional, used by search
-},
+```
+AllToolkit/
+├── app/
+│   ├── (tools)/                  # Modular tool pages grouped by category
+│   │   ├── convert/              # Media & document conversion (YouTube, Audio, Video, Doc)
+│   │   ├── design/               # Business & design generators (Invoice, Card, Certificate)
+│   │   ├── dev/                  # Developer utilities (JSON, Base64, Hash, Regex, QR)
+│   │   ├── image/                # Image editing & AI tools (Remove BG, Compress, Crop, ID)
+│   │   ├── pdf/                  # PDF suite (Edit, Merge, Cut, Split, OCR, Compress)
+│   │   ├── text/                 # Text manipulation (Markdown, Case, Word Count)
+│   │   └── utility/              # Everyday utilities (Password, Color, Currency, Unit)
+│   ├── api/                      # Serverless API routes
+│   │   ├── currency/             # Live exchange rates endpoint
+│   │   └── youtube/              # YouTube download architecture
+│   │       ├── info/             # Video metadata & thumbnail resolver
+│   │       ├── prepare/          # Background download job starter
+│   │       ├── progress/         # Real-time progress tracker
+│   │       └── download/         # Binary media streaming & file delivery
+│   ├── globals.css               # Glassmorphism tokens, gradients, and custom scrollbars
+│   ├── layout.tsx                # Root layout with font configuration & ambient orbs
+│   └── page.tsx                  # Home landing page with ToolGrid & search
+├── bin/
+│   └── yt-dlp                    # Standalone high-performance yt-dlp binary
+├── components/
+│   ├── ui/                       # Reusable UI primitives (Button, Card, Input, Badge, etc.)
+│   ├── FileDropzone.tsx          # Frosted drag-and-drop file upload zone
+│   ├── Navbar.tsx                # Sticky glassmorphism navigation header
+│   ├── Footer.tsx                # Categorized footer links
+│   ├── ToolGrid.tsx              # Dynamic search, category tabs, and favorite bookmarks
+│   └── ToolLayout.tsx            # Unified wrapper for all tool pages
+├── lib/
+│   ├── tools-registry.ts         # Central registry & metadata for all tools
+│   ├── pdf-utils.ts              # PDF rendering, range parsing, and canvas helpers
+│   ├── youtube-utils.ts          # YouTube URL parsing and ID extraction
+│   ├── youtube-jobs.ts           # In-memory progress tracking store
+│   ├── ffmpeg.ts                 # In-browser WebAssembly FFmpeg loader
+│   └── utils.ts                  # Shared utility functions (cn, formatBytes, downloadBlob)
+├── public/                       # Static public assets
+├── tailwind.config.ts            # Tailwind configuration (Glass shadows, custom keyframes)
+└── tsconfig.json                 # TypeScript compiler configuration
 ```
 
-### 2. Create the page at `app/(tools)/<category>/<slug-suffix>/page.tsx`
+---
 
-Use this template:
+## ➕ Adding a New Tool
+
+Adding a new tool to AllTools is structured into 3 straightforward steps:
+
+### 1. Register the Tool in [`lib/tools-registry.ts`](lib/tools-registry.ts)
+Add your tool definition to the `tools` array:
+
+```ts
+import { Sparkles } from 'lucide-react';
+
+{
+  slug: 'image/photo-filter',
+  name: 'Photo Filter',
+  category: 'image',
+  description: 'Apply vintage, cinematic, and modern filters to images',
+  icon: Sparkles,
+  status: 'ready',                      // 'ready' | 'beta' | 'soon'
+  keywords: ['filter', 'effects', 'photo'],
+}
+```
+
+### 2. Create the Tool Page
+Create `app/(tools)/image/photo-filter/page.tsx` using the standard `<ToolLayout>`:
 
 ```tsx
 'use client';
@@ -205,21 +244,21 @@ Use this template:
 import { useState } from 'react';
 import { ToolLayout } from '@/components/ToolLayout';
 import { FileDropzone } from '@/components/FileDropzone';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
-export default function BackgroundBlurPage() {
+export default function PhotoFilterPage() {
   const [file, setFile] = useState<File | null>(null);
 
   return (
-    <ToolLayout slug="image/background-blur">
+    <ToolLayout slug="image/photo-filter">
       {!file ? (
         <FileDropzone accept="image/*" onFiles={(fs) => setFile(fs[0])} />
       ) : (
-        <Card>
-          <CardContent className="p-4 space-y-3">
-            {/* your tool UI here */}
-            <Button onClick={() => setFile(null)}>New image</Button>
+        <Card className="glass-panel">
+          <CardContent className="p-6 space-y-4">
+            {/* Tool implementation */}
+            <Button onClick={() => setFile(null)}>Reset</Button>
           </CardContent>
         </Card>
       )}
@@ -228,89 +267,52 @@ export default function BackgroundBlurPage() {
 }
 ```
 
-### 3. (Optional) Add new deps via `npm install <package>`
-
-If the tool needs a heavy library, **lazy-load it** inside the handler to keep the page bundle small:
-
-```ts
-async function handleProcess() {
-  const heavyLib = await import('some-heavy-lib');  // ⬅ inside the handler
-  // …
-}
+### 3. Verify Build
+Run the TypeScript compiler and build command:
+```bash
+npm run build
 ```
-
-For libraries that don't play nicely with Webpack (e.g. CDN-only ESM), use the `webpackIgnore` hint:
-
-```ts
-const mod = await import(/* webpackIgnore: true */ 'https://esm.sh/some-pkg@1.0.0');
-```
-
-That's it. The new tool will automatically appear on the landing page grid and be searchable.
+Your tool will automatically appear in the landing page catalog, category tabs, and search bar.
 
 ---
 
-## 🏗 Production Build
+## 🔒 Privacy & Security
 
-```bash
-npm run build
-npm run start         # serves the production build on :3000
-```
+AllTools is designed with strict security standards:
+- **No Third-Party Tracking**: Zero tracking pixels, user telemetry, or third-party cookies.
+- **Client-Side Processing**: PDF files, images, OCR scans, and sensitive documents are processed purely in your browser memory.
+- **Auto-Cleanup**: Temporary server processing files (for YouTube media streams) are immediately deleted from disk once delivered to the browser.
+- **Cross-Origin Isolation**: Configured with `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy` headers to support WebAssembly multithreading securely.
 
-Deployment targets:
+---
 
-| Platform | Notes |
-|---|---|
-| **Vercel** | Zero-config — just import the repo. Recommended. |
-| **Netlify** | Works with the Next.js plugin |
-| **Self-host** | `npm run build && npm run start` behind nginx/Caddy |
-| **Static export** | Not currently supported (some routes need runtime features). |
+## 🤝 Contributing
 
-> ⚠️ If you deploy behind a proxy, make sure the `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy` headers (set in `next.config.mjs`) are preserved — they're required for FFmpeg multithreading and SharedArrayBuffer.
+Contributions, bug reports, and feature requests are welcome!
 
-## 🩺 Troubleshooting
+1. Fork the Project repository.
+2. Create your Feature Branch:
+   ```bash
+   git checkout -b feat/amazing-new-tool
+   ```
+3. Commit your Changes following [Conventional Commits](https://www.conventionalcommits.org/):
+   ```bash
+   git commit -m "feat(pdf): add new interactive annotation tool"
+   ```
+4. Push to the Branch:
+   ```bash
+   git push origin feat/amazing-new-tool
+   ```
+5. Open a Pull Request for review.
 
-### "webpack cache pack failed" warnings on Windows
-
-```
-[webpack.cache.PackFileCacheStrategy] Caching failed for pack: ENOENT …
-```
-
-Harmless. Caused by Windows Defender scanning `.next/cache` while webpack is writing. Fixes:
-
-```powershell
-# Clear cache
-Remove-Item -Recurse -Force .next/cache
-
-# Optional: exclude project from Defender (run PowerShell as admin)
-Add-MpPreference -ExclusionPath "d:\path\to\all-tools"
-```
-
-### "EPERM: operation not permitted, open '.next/trace'"
-
-A previous `next` process is still running. Stop it and clear:
-
-```powershell
-Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force
-Remove-Item -Recurse -Force .next
-```
-
-### Tool button does nothing / silent failure
-
-Open browser DevTools → Console. The CDN-loaded libraries (FFmpeg, background-removal) print clear errors if they fail to load (e.g. offline, blocked by adblock).
-
-### Build fails after adding a dep
-
-Some packages bundle Node-only files that Terser can't parse. Workaround: load them via CDN with `webpackIgnore: true` instead of npm. See `lib/ffmpeg.ts` for the pattern.
+---
 
 ## 📜 License
 
-MIT — see `LICENSE` if present, otherwise treat as MIT for now.
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
-## 🤝 Acknowledgements
+---
 
-Built on the shoulders of giants — see the dependency list above. Special thanks to:
-
-- [IMG.LY](https://img.ly/) for the open-source background removal model
-- [Tesseract.js](https://tesseract.projectnaptha.com/) for in-browser OCR
-- [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) for media processing in the browser
-- [shadcn/ui](https://ui.shadcn.com/) for the design primitives inspiration
+<p align="center">
+  Crafted with ❤️ by the <b>AllTools Team</b>.
+</p>

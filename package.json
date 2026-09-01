@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
     "@radix-ui/react-slot": "^1.1.0",
     "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.0",
@@ -34,9 +35,9 @@
     "@types/diff": "^5.2.3",
     "@types/node": "^22.9.0",
     "@types/qrcode": "^1.5.5",
-    "@types/turndown": "^5.0.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/turndown": "^5.0.5",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.18",
