@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    # Compressed outputs live briefly in the OS tmp dir (15-min TTL).
+    # tmpfs keeps them off disk and auto-cleans on restart.
+    tmpfs:
+      - /tmp
+    restart: unless-stopped

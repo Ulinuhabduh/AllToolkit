@@ -50,7 +50,7 @@ export const tools: Tool[] = [
   { slug: 'pdf/edit', name: 'Edit PDF', category: 'pdf', description: 'Add text, signatures, shapes, highlight, images & whiteout to PDF', icon: FilePenLine, keywords: ['annotate', 'sign', 'draw', 'stamp', 'redact', 'edit pdf'], status: 'ready' },
   { slug: 'pdf/cut', name: 'Cut / Remove PDF Pages', category: 'pdf', description: 'Cut, delete, or extract specific pages from a PDF document', icon: FileMinus, keywords: ['delete page', 'remove page', 'potong pdf', 'hapus halaman'], status: 'ready' },
   { slug: 'pdf/split', name: 'Split PDF', category: 'pdf', description: 'Split PDF into separate files by ranges, page count, or extraction', icon: Scissors, keywords: ['extract pages', 'separate', 'pecah pdf'], status: 'ready' },
-  { slug: 'pdf/compress', name: 'Compress PDF', category: 'pdf', description: 'Reduce PDF file size', icon: FileDown, status: 'ready' },
+  { slug: 'pdf/compress', name: 'Compress PDF', category: 'pdf', description: 'Reduce PDF file size (server engine: Ghostscript + qpdf + libvips)', icon: FileDown, status: 'ready', engine: 'server' },
   { slug: 'pdf/to-image', name: 'PDF to Image', category: 'pdf', description: 'Convert PDF pages to PNG/JPG', icon: FileImage, status: 'beta' },
   { slug: 'pdf/from-image', name: 'Image to PDF', category: 'pdf', description: 'Convert images to PDF', icon: FileUp, status: 'ready' },
   { slug: 'pdf/unlock', name: 'Unlock PDF', category: 'pdf', description: 'Remove password from PDF (if you know the password)', icon: Unlock, status: 'beta' },

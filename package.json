@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run lib/pdf-compress",
+    "test:watch": "vitest lib/pdf-compress"
   },
   "dependencies": {
     "@distube/ytdl-core": "^4.16.12",
@@ -27,6 +29,7 @@
     "qrcode": "^1.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sharp": "^0.35.4",
     "tailwind-merge": "^2.5.4",
     "tesseract.js": "^5.1.1",
     "turndown": "^7.2.0"
@@ -44,6 +47,7 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.14",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^5.0.0"
   }
 }
